@@ -11,6 +11,8 @@ To run the tests in the terminal use `npm test`. This will start a process that 
 
 An `index.html` file has been provided and has `angular` loaded already (remember to link your own JS). The tests are just checking that a module exists, and features of the service and the controller -- the template is not being checked. It is there for your convenience but it would be fine to just work based off of the tests.
 
+Note: You do not need to bring in any dependencies. `npm install` will install angular.js. If you try to include a module like `ui.router` or `ngResource` by addind a script with a cdn source it will not be found by the tests.
+
 ## Instructions
 
 For this checkpoint you will be building a little app to keep track of random thoughts. The app will have one model, a **musing**.
@@ -23,7 +25,7 @@ For this checkpoint you will be building a little app to keep track of random th
   - Give the service a method `remove` that takes an index and deletes the musing at that index of the array
 - Create a controller `MusingsController` and inject the `musings` service as a dependency
   - Add a property `musings` to the controller that holds the return of `musings.all()`
-  - Add a property `newMusing` to the controller is an object with properties `title`, `content`, and `author` with initial values of `''`(define this on the controller explicitly rather than declaring it by way of ng-model directive)
+  - Add a property `newMusing` to the controller is an object with properties `title`, `content`, and `author` with initial values of `''` (define this on the controller explicitly rather than declaring it by way of ng-model directive)
   - Add a method `createMusing` to the controller that calls `musings.create` with the `newMusing` value of the controller
   - Add a method `removeMusing` to the controller that takes an index and calls `musings.remove` with that index
 
