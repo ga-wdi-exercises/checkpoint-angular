@@ -49,7 +49,7 @@
       }
 
       function createMusing () {
-      musings.create(this.newMusing)
+      musings.create(this.newMusing.title, this.newMusing.author, this.newMusing.content)
       }
 
   }
